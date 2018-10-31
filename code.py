@@ -55,9 +55,7 @@ def generate_author_pair_scores(pair_list, directory):
                 return cleaned_names      
             except:
                 print("File not found please save to directory using file name 'names_to_check.csv'")
-
-                
-                
+             
 def generate_pairs_of_ambiguous_authors(cleaned_names):
     """
     Generates pairs of ambiguous authors which are equivalent (e.g. David Smith and D Smith)
@@ -102,15 +100,6 @@ def replace_ambiguous_authors(d, authors, author_lists):
     
     unambiguous_authors, unambiguous_author_lists = [], []
     
-    #for author in authors:
-     #   x = 0
-      #  for key in d:
-       #     if author in d[key]:
-        #        unambiguous_authors.append(key)
-         #       x += 1     
-        #if x == 0:
-         #   unambiguous_authors.append(author)
-    
     for author_list in author_lists:
         temp = []
         for author in author_list:
@@ -135,5 +124,4 @@ def run_programme(directory, file_name, authors, author_lists):
     all_pairs = generate_pairs_of_ambiguous_authors(cleaned_names)
     dictionary_of_ambiguous_authors = generate_dictionary_of_ambiguous_authors(all_pairs)
     (unambiguous_authors, unambiguous_author_lists) = replace_ambiguous_authors(dictionary_of_ambiguous_authors, authors, author_lists)
-    #unique_authors = generate_author_sets(unambiguous_authors) 
     return (unambiguous_authors, unambiguous_author_lists)
