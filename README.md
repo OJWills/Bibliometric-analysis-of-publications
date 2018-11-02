@@ -1,15 +1,16 @@
-# Author-Name-Disambiguator
+# Bibliometric analysis of publications
 
 ### Description 
-This repository provides Python code to disambiguate author names using fuzzy matching and a
+This repository provides Python code to identify influential researchers from an input file of publications by aggregating Relative Citation Ratio (RCR) scores. The RCR is a field-normalised citation metric which can be calculated by using the following tool https://icite.od.nih.gov/ or by downloading papers from UberResearch. The code takes an input csv file containing authors, publications and RCR scores and converts it to an output dataframe consisting of unique authors and their aggregated RCR scores including total, max, min and median RCR. The tool is useful for rapidly identifying influential researchers and could be used to develop tools for peer review.
 
-. The code pulls in author names from publications, generates all possible combinations and uses fuzzy matching to flag names which may be the same for example John Smith and J Smith. Part-way through the programme there is an optional pause for the user to manually validate the matches if required. A more effective approach could be to use relational machine learning as discussed here: https://ieeexplore.ieee.org/document/7891792.
+### Prerequisites
+Pandas, fuzzywuzzy, itertools
 
 ### Directions on use
 1) Save spreadsheet containing publications and RCR sores as a CSV file.
 2) Ensure author field is marked 'Author' and RCR field is marked 'RCR'.
-3) Update the code below with correct directory and file_name.
-4) Run code. Respond to prompts. Code can analyse all authors or first and last author only.
+3) Update the main.py file with correct directory and file_name.
+4) Run mian.py. Respond to prompts. Code can analyse all authors or first and last author only.
 
 ### Example input
 ![Alt text](./Fig_1.png?raw=true "Example Output")
