@@ -11,3 +11,4 @@ This repository provides Python code to disambiguate author names using fuzzy ma
 3) Update the code below with correct directory and file_name.
 4) Run code. Respond to prompts. Code can analyse all authors or first and last author only.
 
+![Alt text](./image.docx?raw=true "Example Output")
