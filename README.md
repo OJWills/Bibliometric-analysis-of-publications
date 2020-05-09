@@ -11,10 +11,3 @@ Pandas, fuzzywuzzy, itertools
 2) Ensure author field is marked 'Author' and RCR field is marked 'RCR'.
 3) Update the main.py file with correct directory and file_name.
 4) Run mian.py. Respond to prompts. Code can analyse all authors or first and last author only.
-
-### Example input
-![Alt text](./Fig_1.png?raw=true "Example Output")
-
-### Example output
-![Alt text](./Fig_2.png?raw=true "Example Output")
-
